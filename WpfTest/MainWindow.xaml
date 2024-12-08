@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button VerticalAlignment="Center" HorizontalAlignment="Center" Name="Button" Click="Button_OnClick">
-            Hello World test
+            Hello World
         </Button>
     </Grid>
 </Window>
