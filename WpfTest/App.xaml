@@ -1,9 +1,24 @@
 ﻿<Application x:Class="WpfTest.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
              xmlns:local="clr-namespace:WpfTest"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <!-- Define gradient brush -->
+            <LinearGradientBrush x:Key="GradientBackground" StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#1C2028" Offset="0.0" />
+                <GradientStop Color="#3C394D" Offset="1.0" />
+            </LinearGradientBrush>
+            
+            <!-- Define button brush -->
+            <SolidColorBrush x:Key="ButtonBrush" Color="#153548" />
+            
+            <ResourceDictionary.MergedDictionaries>
+                <ui:ThemesDictionary Theme="Dark" />
+                <ui:ControlsDictionary />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
