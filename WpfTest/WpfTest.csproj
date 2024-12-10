@@ -16,4 +16,11 @@
       <Folder Include="Icons\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="Icons\Grey_J_Icon.ico" />
+      <Resource Include="Icons\Grey_J_Icon.ico">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+    </ItemGroup>
+
 </Project>

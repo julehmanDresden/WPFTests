@@ -28,7 +28,7 @@
 
         <!--Title-->
         <StackPanel Grid.Row="0" Grid.Column="0"  Orientation="Horizontal" HorizontalAlignment="left">
-            <ui:SymbolIcon Symbol="Grey_J_Icon.ico"></ui:SymbolIcon>
+            <Image Source="/WpfTest;component/Icons/Grey_J_Icon.ico" Width="40" Height="40" Margin="2" />
             <Label Padding="10">MainWindow</Label>
         </StackPanel>
         
