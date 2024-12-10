@@ -21,8 +21,28 @@ public partial class MainWindow : Window
         InitializeComponent();
     }
 
-    private void Button_OnClick(object sender, RoutedEventArgs e)
+    private void TitleBar_MouseDown(object sender, MouseButtonEventArgs e)
     {
-        Button.Content = "Ja lol";
+        if (e.ChangedButton == MouseButton.Left)
+        {
+            this.DragMove(); // Enable dragging the window
+        }
     }
+    
+    private void BtnMinimize_OnClick(object sender, RoutedEventArgs e)
+    {
+        this.WindowState = WindowState.Minimized; // Minimize the window
+    }
+
+    private void BtnMaximize_OnClick(object sender, RoutedEventArgs e)
+    {
+        this.WindowState = this.WindowState == WindowState.Maximized ? WindowState.Normal : // Restore the window
+            WindowState.Maximized; // Maximize the window
+    }
+
+    private void BtnClose_OnClick(object sender, RoutedEventArgs e)
+    {
+        this.Close(); // Close the application
+    }
+    
 }
