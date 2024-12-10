@@ -15,6 +15,9 @@
             <!-- Define button brush -->
             <SolidColorBrush x:Key="ButtonBrush" Color="#153548" />
             
+            <!-- Define Page Brush -->
+            <SolidColorBrush x:Key="PageBrush" Color="#212121"/>
+            
             <ResourceDictionary.MergedDictionaries>
                 <ui:ThemesDictionary Theme="Dark" />
                 <ui:ControlsDictionary />

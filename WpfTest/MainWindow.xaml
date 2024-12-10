@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Height="500"
         Width="800"
-        MinHeight="200"
-        MinWidth="400"
+        MinHeight="300"
+        MinWidth="700"
         WindowStyle="None"
         AllowsTransparency="True"
         Background="{StaticResource GradientBackground}"
@@ -26,32 +26,49 @@
     <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="5">
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="40"></RowDefinition>
-                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="45"></RowDefinition>
+                <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
             
             <Grid.ColumnDefinitions>
-                <ColumnDefinition ></ColumnDefinition>
-                <ColumnDefinition ></ColumnDefinition>
+                <ColumnDefinition Width="170"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
             <!--Icon-->
             <StackPanel Grid.Row="0" Grid.Column="0"  Orientation="Horizontal" HorizontalAlignment="left">
-                <ui:Image Stretch="Fill" Source="/WpfTest;component/Icons/Grey_J_Icon.ico" Width="40" Height="40" Margin="2" />
-                <Label Padding="10">MainWindow</Label>
+                <ui:Image Stretch="Fill" Source="/WpfTest;component/Icons/Grey_J_Icon.ico" Width="40" 
+                          Height="40" Margin="2" />
+                <Label Padding="12">MainWindow</Label>
             </StackPanel>
             
             <!--Title Bar-->
             <StackPanel Grid.Row="0" Grid.Column="1"  Orientation="Horizontal" HorizontalAlignment="Right">
-                <ui:Button x:Name="BtnMinimize" Click="BtnMinimize_OnClick" BorderBrush="Transparent" Background="Transparent" 
+                <ui:Button x:Name="BtnMinimize" Click="BtnMinimize_OnClick" BorderBrush="Transparent" 
+                           Background="Transparent" 
                            HorizontalAlignment="Center" Width="60" Height="40" Content="─" />
             
-                <ui:Button x:Name="BtnMaximize" Click="BtnMaximize_OnClick"  BorderBrush="Transparent" Background="Transparent" 
+                <ui:Button x:Name="BtnMaximize" Click="BtnMaximize_OnClick"  BorderBrush="Transparent" 
+                           Background="Transparent" 
                            HorizontalAlignment="Center" Width="60" Height="40" Content="▢" />
             
-                <ui:Button x:Name="BtnClose" Click="BtnClose_OnClick" BorderBrush="Transparent" Background="Transparent" 
+                <ui:Button x:Name="BtnClose" Click="BtnClose_OnClick" BorderBrush="Transparent" 
+                           Background="Transparent" 
                            HorizontalAlignment="Center" Width="60" Height="40" Content="X" />
             </StackPanel>
+            
+            <!-- Side Menu -->
+            <ui:ListView Margin="10" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left"  
+                     Width="150"  Background="Transparent" Foreground="White" 
+                     SelectionChanged="Selector_OnSelectionChanged">
+                <ui:ListViewItem Content="Home"/>
+                <ui:ListViewItem Content="Discovery" />
+                <ui:ListViewItem Content="Featured" />
+            </ui:ListView>
+            
+            <!--MainFrame-->
+            <Frame Grid.Row="1" Grid.Column="1" x:Name="MainFrame" 
+                   NavigationUIVisibility="Hidden"></Frame>
         </Grid>
     </Border>
 </Window>

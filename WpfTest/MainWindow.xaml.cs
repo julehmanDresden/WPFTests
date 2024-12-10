@@ -1,13 +1,9 @@
 ﻿using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using WpfTest.Pages;
 
 namespace WpfTest;
 
@@ -16,9 +12,18 @@ namespace WpfTest;
 /// </summary>
 public partial class MainWindow : Window
 {
+    private readonly HomePage _homePage;
+    private readonly DiscoveryPage _discoveryPage;
+    private readonly FeaturedPage _featuredPage;
+    
     public MainWindow()
     {
+        _homePage = new HomePage();
+        _discoveryPage = new DiscoveryPage();
+        _featuredPage = new FeaturedPage();
+        
         InitializeComponent();
+        MainFrame.Navigate(new HomePage());
     }
 
     private void TitleBar_MouseDown(object sender, MouseButtonEventArgs e)
@@ -44,5 +49,23 @@ public partial class MainWindow : Window
     {
         this.Close(); // Close the application
     }
-    
+
+    private void Selector_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        if ((sender as ListBox)?.SelectedItem is not ListBoxItem selectedItem) return;
+        var content = selectedItem.Content.ToString();
+
+        switch (content)
+        {
+            case "Home":
+                MainFrame.Navigate(_homePage);
+                break;
+            case "Discovery":
+                MainFrame.Navigate(_discoveryPage);
+                break;
+            case "Featured":
+                MainFrame.Navigate(_featuredPage);
+                break;
+        }
+    }
 }
