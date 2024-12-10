@@ -21,6 +21,11 @@
       <Resource Include="Icons\Grey_J_Icon.ico">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Resource>
+      <None Remove="Icons\partially-cloudy.png" />
+      <None Remove="Icons\sunny_weather.png" />
+      <Resource Include="Icons\sunny_weather.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
     </ItemGroup>
 
 </Project>

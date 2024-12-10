@@ -3,14 +3,25 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
       xmlns:local="clr-namespace:WpfTest.Pages"
+      xmlns:w="clr-namespace:WpfTest.Widgets"
       mc:Ignorable="d"
-      Title="HomePage">
+      Title="HomePage"
+      Background="Transparent">
     
-    <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="5">
-        <Grid Background="{DynamicResource ResourceKey=PageBrush}">
-            <TextBlock Background="Transparent" Foreground="Azure" Text="Welcome to Home Page" 
-                       FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" />
-        </Grid>
-    </Border>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        
+        <TextBlock Grid.Row="0" Grid.Column="0"
+                   Background="Transparent" Foreground="Azure" Text="Welcome to Home Page" 
+                   FontSize="30" FontWeight="UltraLight" Margin="10"
+                   HorizontalAlignment="Left" VerticalAlignment="Top" />
+        
+        <w:Weather Grid.Row="1" x:Name="WidgetWeather" HorizontalAlignment="Left"/>
+    </Grid>
 </Page>

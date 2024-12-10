@@ -6,17 +6,22 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
-            <!-- Define gradient brush -->
-            <LinearGradientBrush x:Key="GradientBackground" StartPoint="0,0" EndPoint="1,1">
+            <!-- Define gradient brush Main Window -->
+            <LinearGradientBrush x:Key="MainWindowGradientBackground" StartPoint="0,0" EndPoint="1,1">
                 <GradientStop Color="#1C2028" Offset="0.0" />
                 <GradientStop Color="#3C394D" Offset="1.0" />
             </LinearGradientBrush>
             
-            <!-- Define button brush -->
-            <SolidColorBrush x:Key="ButtonBrush" Color="#153548" />
+            <!-- Define gradient brush Page -->
+            <RadialGradientBrush x:Key="PageGradientBackground" GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="1" RadiusY="1">
+                <GradientStop Color="#FF1E3A57" Offset="0.0" />
+                <GradientStop Color="#FF4C637A" Offset="0.5" />
+            </RadialGradientBrush>
             
-            <!-- Define Page Brush -->
-            <SolidColorBrush x:Key="PageBrush" Color="#212121"/>
+            <!-- Define button brush -->
+            <SolidColorBrush x:Key="ButtonBrushLight" Color="#3597AB" />
+            <SolidColorBrush x:Key="ButtonBrushClassic" Color="#153548" />
+            <SolidColorBrush x:Key="ButtonBrushDark" Color="#212121"/>
             
             <ResourceDictionary.MergedDictionaries>
                 <ui:ThemesDictionary Theme="Dark" />

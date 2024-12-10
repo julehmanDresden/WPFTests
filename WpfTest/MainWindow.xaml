@@ -11,7 +11,7 @@
         MinWidth="700"
         WindowStyle="None"
         AllowsTransparency="True"
-        Background="{StaticResource GradientBackground}"
+        Background="{StaticResource MainWindowGradientBackground}"
         WindowStartupLocation="CenterScreen"
         MouseLeftButtonDown="TitleBar_MouseDown"
         ResizeMode="CanResize"
@@ -67,7 +67,7 @@
             </ui:ListView>
             
             <!--MainFrame-->
-            <Frame Grid.Row="1" Grid.Column="1" x:Name="MainFrame" 
+            <Frame Grid.Row="1" Grid.Column="1" x:Name="MainFrame"
                    NavigationUIVisibility="Hidden"></Frame>
         </Grid>
     </Border>

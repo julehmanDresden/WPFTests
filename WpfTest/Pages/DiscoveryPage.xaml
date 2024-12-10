@@ -7,11 +7,9 @@
       mc:Ignorable="d"
       Title="DiscoveryPage">
     
-    <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="5">
-        <Grid Background="{DynamicResource ResourceKey=PageBrush}">
-            <TextBlock Background="Transparent" Foreground="Azure" Text="Discovered by Julius Lehmann" 
-                       FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" />
-            
-        </Grid>
-    </Border>
+    <Grid Background="{DynamicResource ResourceKey=PageBrush}">
+        <TextBlock Background="Transparent" Foreground="Azure" Text="Discovered by Julius Lehmann" 
+                   FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        
+    </Grid>
 </Page>
