@@ -1,11 +1,9 @@
-﻿using System.Text;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Media;
-using WpfTest.Pages;
+using WpfTest.Views.Pages;
 
-namespace WpfTest;
+namespace WpfTest.Views.Windows;
 
 /// <summary>
 /// Interaction logic for MainWindow.xaml

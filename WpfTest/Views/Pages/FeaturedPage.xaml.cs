@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace WpfTest.Pages;
+namespace WpfTest.Views.Pages;
 
 public partial class FeaturedPage : Page
 {

@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace WpfTest;
+namespace WpfTest.Views;
 
 /// <summary>
 /// Interaction logic for App.xaml

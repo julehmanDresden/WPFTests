@@ -1,11 +1,11 @@
-﻿<Page x:Class="WpfTest.Pages.HomePage"
+﻿<Page x:Class="WpfTest.Views.Pages.HomePage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
-      xmlns:local="clr-namespace:WpfTest.Pages"
-      xmlns:w="clr-namespace:WpfTest.Widgets"
+      xmlns:local="clr-namespace:WpfTest.Views.Pages"
+      xmlns:w="clr-namespace:WpfTest.Views.Widgets"
       mc:Ignorable="d"
       Title="HomePage"
       Background="Transparent">
@@ -22,6 +22,6 @@
                    FontSize="30" FontWeight="UltraLight" Margin="10"
                    HorizontalAlignment="Left" VerticalAlignment="Top" />
         
-        <w:Weather Grid.Row="1" x:Name="WidgetWeather" HorizontalAlignment="Left"/>
+        <w:WeatherWidget Grid.Row="1" x:Name="WidgetWeather" HorizontalAlignment="Left"/>
     </Grid>
 </Page>
