@@ -10,6 +10,13 @@
       Title="HomePage"
       Background="Transparent">
     
+    <Page.Resources>
+        <localMvvm:HomePageViewModel x:Key="HomePageViewModel"/>
+    </Page.Resources>
+    <Page.DataContext>
+        <StaticResource ResourceKey="HomePageViewModel"/>
+    </Page.DataContext>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="60"></RowDefinition>

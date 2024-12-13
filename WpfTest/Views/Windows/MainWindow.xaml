@@ -18,6 +18,10 @@
         ResizeMode="CanResize"
         Title="MainWindow">
     
+    <Window.DataContext>
+        <localMvvm:MainWindowViewModel/>
+    </Window.DataContext>
+    
     <!--WindowChrome-->
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="0" ResizeBorderThickness="10"/>

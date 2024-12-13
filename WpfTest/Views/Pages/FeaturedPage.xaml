@@ -8,6 +8,13 @@
       mc:Ignorable="d"
       Title="FeaturedPage">
     
+    <Page.Resources>
+        <localMvvm:FeaturedPageViewModel x:Key="FeaturedPageViewModel"/>
+    </Page.Resources>
+    <Page.DataContext>
+        <StaticResource ResourceKey="FeaturedPageViewModel"/>
+    </Page.DataContext>
+    
     <Grid Background="{DynamicResource ResourceKey=PageBrush}">
         <TextBlock Background="Transparent" Foreground="Azure" Text="Featured by Julius Lehmann" 
                    FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" />

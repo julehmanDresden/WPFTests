@@ -6,10 +6,28 @@
       xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
       xmlns:localMvvm="clr-namespace:WpfTest.ViewModels.Pages"
       mc:Ignorable="d"
-      Title="DiscoveryPage">
+      Title="DiscoveryPage"
+      Height="300"
+      Width="500">
+    
+    <Page.Resources>
+        <localMvvm:DiscoveryPageViewModel x:Key="DiscoveryPageViewModel"/>
+    </Page.Resources>
+    <Page.DataContext>
+        <StaticResource ResourceKey="DiscoveryPageViewModel"/>
+    </Page.DataContext>
     
     <Grid Background="{DynamicResource ResourceKey=PageBrush}">
-        <TextBlock Background="Transparent" Foreground="Azure" Text="Discovered by Julius Lehmann" 
-                   FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <ui:TextBox x:Name="FirstName" Foreground="Azure" 
+                        Text="{Binding FirstName}"
+                        FontSize="30"/>
+        
+            <ui:TextBox x:Name="LastName" Foreground="Azure" 
+                        Text="{Binding LastName}"
+                        FontSize="30" />
+            
+            <ui:TextBlock Foreground="Azure" Text="{Binding FullName}" FontSize="30"/>
+        </StackPanel>
     </Grid>
 </Page>
