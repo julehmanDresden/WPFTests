@@ -13,7 +13,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Commands\" />
       <Folder Include="Icons\" />
       <Folder Include="Models\" />
     </ItemGroup>

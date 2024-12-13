@@ -7,8 +7,8 @@
       xmlns:localMvvm="clr-namespace:WpfTest.ViewModels.Pages"
       mc:Ignorable="d"
       Title="DiscoveryPage"
-      Height="300"
-      Width="500">
+      Height="400"
+      Width="600">
     
     <Page.Resources>
         <localMvvm:DiscoveryPageViewModel x:Key="DiscoveryPageViewModel"/>
@@ -18,16 +18,21 @@
     </Page.DataContext>
     
     <Grid Background="{DynamicResource ResourceKey=PageBrush}">
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" >
-            <ui:TextBox x:Name="FirstName" Foreground="Azure" 
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"  Width="500">
+            
+            <ui:TextBox Margin="0,10,0,0" x:Name="FirstName" Foreground="Azure" HorizontalAlignment="Stretch"
                         Text="{Binding FirstName}"
                         FontSize="30"/>
         
-            <ui:TextBox x:Name="LastName" Foreground="Azure" 
+            <ui:TextBox Margin="0,10,0,0" x:Name="LastName" Foreground="Azure" HorizontalAlignment="Stretch"
                         Text="{Binding LastName}"
                         FontSize="30" />
             
-            <ui:TextBlock Foreground="Azure" Text="{Binding FullName}" FontSize="30"/>
+            <ui:TextBlock Margin="0,10,0,0" Foreground="Azure" HorizontalAlignment="Stretch"
+                          Text="{Binding FullName}" FontSize="30"/>
+            
+            <ui:Button Margin="0,10,0,0" HorizontalAlignment="Stretch"
+                       Background="{DynamicResource ButtonBrushClassic}" Content="Click Me"/>
         </StackPanel>
     </Grid>
 </Page>
