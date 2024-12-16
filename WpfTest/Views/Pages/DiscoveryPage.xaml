@@ -32,7 +32,8 @@
                           Text="{Binding FullName}" FontSize="30"/>
             
             <ui:Button Margin="0,10,0,0" HorizontalAlignment="Stretch"
-                       Background="{DynamicResource ButtonBrushClassic}" Content="Click Me"/>
+                       Background="{DynamicResource ButtonBrushClassic}" Content="Clear"
+                       Command="{Binding ClearCommand}"/>
         </StackPanel>
     </Grid>
 </Page>

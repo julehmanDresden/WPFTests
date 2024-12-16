@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
+using WpfTest.Commands;
 
 namespace WpfTest.ViewModels.Pages;
 
@@ -13,16 +15,24 @@ public sealed class DiscoveryPageViewModel:INotifyPropertyChanged
     /// </summary>
     public DiscoveryPageViewModel()
     {
+        //short Lamda writing methods
+        this.ClearCommand = new DelegateCommand(
+            (canExecuteObject) => !string.IsNullOrEmpty(this.FirstName) && !string.IsNullOrEmpty(this.LastName),
+            (executeMethod) => { this.FirstName = ""; this.LastName = ""; }
+            );
+        
         FirstName = "Julius";
         LastName = "Lehmann";
     }
     
-    private string _firstName;
+    public DelegateCommand ClearCommand { get; set; }
+    
+    private string? _firstName;
     
     /// <summary>
     /// Binding FirstName
     /// </summary>
-    public string FirstName   { 
+    public string? FirstName   { 
         get => _firstName;
         set
         {
@@ -30,15 +40,18 @@ public sealed class DiscoveryPageViewModel:INotifyPropertyChanged
             _firstName= value;
             OnPropertyChanged();
             OnPropertyChanged(nameof(FullName));
+            
+            //check if button is clickable again
+            this.ClearCommand.RaiseCanExecuteChanged();
         }
     }
     
-    private string _lastName;
+    private string? _lastName;
     
     /// <summary>
     /// Binding LastName
     /// </summary>
-    public string LastName 
+    public string? LastName 
     { 
         get => _lastName; 
         set
@@ -47,6 +60,9 @@ public sealed class DiscoveryPageViewModel:INotifyPropertyChanged
             _lastName= value;
             OnPropertyChanged();
             OnPropertyChanged(nameof(FullName));
+            
+            //check if button is clickable again
+            this.ClearCommand.RaiseCanExecuteChanged();
         }
     }
     
